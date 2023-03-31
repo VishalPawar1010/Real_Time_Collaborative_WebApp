@@ -4,6 +4,24 @@
 2. Understand its internal working and implement its methods. (get/fetch() , contains(), delete())
 3. With respect to your app/project contemplate on where you apply what and why?
 
+# Basics of programming languages
+
+1. what is programming and languages? types?
+2. Why learning them is important?
+3. Static vs Dynamic language?
+
+# Java virtual machine
+
+1. what is compiler?
+2. what is bytecode?
+3. what is interpreter?
+4. what is machine code (0 and 1)? how its diff from byte code?
+5. why java is platform independent? but jvm is dependent?
+6. What happens between jvm and os ? related to this machine code?
+7. JVM vs jdk vs jre vs JIT ?
+8. what are dev tools?
+9. what are library classes?
+
 # Questions relative to java concepts
 
 1. What is JVM?
