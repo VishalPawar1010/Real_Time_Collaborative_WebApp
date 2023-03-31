@@ -16,6 +16,8 @@ public class findMaxNumTime {
         }
 
         int numThreads = 10; // number of threads to use
+        System.out.println("==================================================================");
+
         int sublistSize = list.size() / numThreads; // size of each sublist
         ArrayList<SublistMaxFinder> threads = new ArrayList<>();
 
@@ -42,6 +44,8 @@ public class findMaxNumTime {
         for (int i = 0; i < numThreads; i++) {
             System.out.println("Thread " + i + " time: " + threadTimes[i] + " ns");
         }
+        System.out.println("==================================================================");
+
     }
 
     public static class SublistMaxFinder extends Thread {

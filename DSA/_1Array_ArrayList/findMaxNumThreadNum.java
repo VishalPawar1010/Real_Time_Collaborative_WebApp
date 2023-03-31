@@ -22,6 +22,8 @@ public class findMaxNumThreadNum {
 
         // 3 -> fix number of threads - subList size accordingly
         int numThreads = Runtime.getRuntime().availableProcessors(); // set number of threads dynamically
+        System.out.println("==================================================================");
+
         System.out.println("Maximum number of CPU cores vaialable for machine: " + numThreads);
         int sublistSize = list.size() / numThreads; // size of each sublist
         ArrayList<SublistMaxFinder> threads = new ArrayList<>();
@@ -70,6 +72,7 @@ public class findMaxNumThreadNum {
         // System.out.println("Time taken by each thread: " + (endTime - startTime) /
         // numThreads + " milli-s");
         System.out.println("Avg-Time taken by each thread: " + (endTime - startTime) / numThreads + " nano-secs");
+        System.out.println("==================================================================");
 
     }
 
