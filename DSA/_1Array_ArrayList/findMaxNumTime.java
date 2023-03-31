@@ -3,6 +3,8 @@ package DSA._1Array_ArrayList;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+// Get max number - for threads count = user input 
+// line no 20 : numThreads = 10
 
 public class findMaxNumTime {
     public static void main(String[] args) throws InterruptedException {

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+// Get max number - for threads count = max machine cpu cores available
+
 public class findMaxNumThreadNum {
 
     public static void main(String[] args) throws InterruptedException {
@@ -21,12 +23,19 @@ public class findMaxNumThreadNum {
         // System.out.println("List of random no " + list);
 
         // 3 -> fix number of threads - subList size accordingly
-        int numThreads = Runtime.getRuntime().availableProcessors(); // set number of threads dynamically
+
+        int numThreads = 8; // number of threads to use
+        // int numThreads = Runtime.getRuntime().availableProcessors(); // set number of
+        // threads dynamically
+
+        // int numThreads = Runtime.getRuntime().availableProcessors(); // set number of
+        // threads dynamically
         System.out.println("==================================================================");
 
         System.out.println("Maximum number of CPU cores vaialable for machine: " + numThreads);
         int sublistSize = list.size() / numThreads; // size of each sublist
         ArrayList<SublistMaxFinder> threads = new ArrayList<>();
+        long startTime = System.nanoTime();
 
         // 4 create and start threads
         for (int i = 0; i < numThreads; i++) {
@@ -37,21 +46,12 @@ public class findMaxNumThreadNum {
 
         // 6 pre-setup for time measurement (after thread start)
         // long startTime = System.currentTimeMillis();
-        long startTime = System.nanoTime();
 
         int max = Integer.MIN_VALUE;
         long[] threadTimes = new long[numThreads];
 
         // 7 - join threads and find maximum number among returned values
 
-        // for (SublistMaxFinder thread : threads) {
-        // thread.join();
-        // int threadMax = thread.getMax();
-        // if (threadMax > max) {
-        // max = threadMax;
-        // }
-        // threadTimes[i] = threads.get(i).getElapsedTime();
-        // }
         for (int i = 0; i < numThreads; i++) {
             threads.get(i).join();
             int threadMax = threads.get(i).getMax();
@@ -71,6 +71,7 @@ public class findMaxNumThreadNum {
         }
         // System.out.println("Time taken by each thread: " + (endTime - startTime) /
         // numThreads + " milli-s");
+
         System.out.println("Avg-Time taken by each thread: " + (endTime - startTime) / numThreads + " nano-secs");
         System.out.println("==================================================================");
 
