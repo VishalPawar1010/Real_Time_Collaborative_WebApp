@@ -1,8 +1,8 @@
 
 # k6 Load Testing Readme : for EagleApps
-
-- [k6 Load Testing Readme : for EagleApps](#k6-load-testing-readme--for-eagleapps)
+#### Table of contents
 - [Main script configuration \& execution](#main-script-configuration--execution)
+  - [Imported Modules](#imported-modules)
   - [Exported Methods](#exported-methods)
   - [Important Methods](#important-methods)
   - [Configuration and Execution Flow (with examples)](#configuration-and-execution-flow-with-examples)
@@ -36,7 +36,8 @@ The `main.js` file orchestrates and configures the execution of load and perform
 - [Exported Methods](#exported-methods)
 - [Important Methods](#other-methods)
 - [Configuration and Execution Flow](#configuration-and-execution-flow) -->
-
+## Imported Modules
+ - Imports required files/functions
 ## Exported Methods
 Note: The code contains various environment variables (`__ENV`) that influence test behavior.
 - `setup()`: Called at the beginning of the test. Performs actions based on environment variables.
